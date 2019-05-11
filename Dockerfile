@@ -1,6 +1,6 @@
-FROM percona:5.7.23-stretch
+FROM percona:5.7.25
 LABEL creater="barnett"
-ENV MYSQL_VERSION=5.7.23
+ENV MYSQL_VERSION=5.7.25
 ENV TZ=Asia/Shanghai
 ADD docker-entrypoint.sh /run/docker-entrypoint.sh
 ADD ./run/docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
