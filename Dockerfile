@@ -19,7 +19,7 @@ RUN fetchDeps=' \
 EXPOSE 3306
 VOLUME ["/var/lib/mysql", "/var/log/mysql"]
 # 将代码仓库中 sql 目录下的脚本放到对应的初始化目录下
-COPY sql/*.sql /docker-entrypoint-initdb.d/
+COPY pig.sql /docker-entrypoint-initdb.d/
 # change ENTRYPOINT exec some custom command
 ENTRYPOINT [ "/run/docker-entrypoint.sh" ]
 CMD [ "mysqld" ]
